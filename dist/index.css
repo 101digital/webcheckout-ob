@@ -1,0 +1,25 @@
+._23Au0 ul {
+  list-style-type:none;
+  padding-left:0;
+}
+
+._23Au0 ul li{
+  cursor: pointer;
+  padding:10px;
+  border: solid 1px #ccc;
+  border-bottom: none;
+}
+
+._23Au0 ul li:last-child {
+  border-bottom: solid 1px #ccc;
+}
+
+._23Au0 ul li:hover{
+  border: solid 1px orange;
+  border-bottom: none;
+}
+
+._2jvUq input[type='text'] {
+  width: 98%;
+  line-height: 32px;
+}
