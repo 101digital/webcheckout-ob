@@ -37,6 +37,4 @@ class Example extends Component {
 }
 ```
 
-## License
 
-MIT © [tuantla](https://github.com/tuantla)
