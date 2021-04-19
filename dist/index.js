@@ -114,10 +114,20 @@ var OBWebCheckout = /*#__PURE__*/function (_React$Component2) {
     };
     _this2.handleSubmit = _this2.handleSubmit.bind(_assertThisInitialized(_this2));
     _this2.handleFilterTextChange = _this2.handleFilterTextChange.bind(_assertThisInitialized(_this2));
+    _this2.handleAction = _this2.handleAction.bind(_assertThisInitialized(_this2));
+    _this2.setStatus = _this2.setStatus.bind(_assertThisInitialized(_this2));
     return _this2;
   }
 
   var _proto2 = OBWebCheckout.prototype;
+
+  _proto2.handleAction = function handleAction(action) {
+    window.location = action.url;
+  };
+
+  _proto2.setStatus = function setStatus(status, details) {
+    console.log("status =" + status + ": details = " + JSON.stringify(details));
+  };
 
   _proto2.handleFilterTextChange = function handleFilterTextChange(filterText) {
     this.setState({

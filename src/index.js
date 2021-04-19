@@ -65,12 +65,23 @@ import styles from './styles.module.css'
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
 
+        this.handleAction = this.handleAction.bind(this)
+        this.setStatus = this.setStatus.bind(this)
+
+    }
+
+    handleAction(action) {
+      window.location = action.url
+    }
+
+    setStatus(status, details) {
+      console.log(`status =${status}: details = ${JSON.stringify(details)}`)
     }
 
     handleFilterTextChange(filterText) {
       this.setState({
         filterText: filterText
-      });
+      })
     }
 
     handleSubmit(paymentMethod) {
