@@ -1,13 +1,9 @@
 # webcheckout-ob
 
-> Made with create-react-library
-
-[![NPM](https://img.shields.io/npm/v/webcheckout-ob.svg)](https://www.npmjs.com/package/webcheckout-ob) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
+# Install
 
 ```bash
-npm install --save webcheckout-ob
+yarn add https://github.com/101digital/webcheckout-ob
 ```
 
 ## Usage
@@ -15,12 +11,28 @@ npm install --save webcheckout-ob
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'webcheckout-ob'
+import ObWebCheckout from 'webcheckout-ob'
 import 'webcheckout-ob/dist/index.css'
 
+const configuration = {
+  paymentMethods: [],
+  onSubmit: (state, dropin) => {
+
+  },
+  onError(error) {
+    console.error(error)
+  }
+ }
+
+
 class Example extends Component {
+
+  async componentDidMount() {
+       let paymentMethodsResponse = await getPaymmentMethod()
+       this.setState({paymentMethods: paymentMethodsResponse.paymentMethods})
+    }
   render() {
-    return <MyComponent />
+    return <ObWebCheckout  configuration={configuration} />
   }
 }
 ```
