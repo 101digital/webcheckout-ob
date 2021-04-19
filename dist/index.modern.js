@@ -24,6 +24,8 @@ function _assertThisInitialized(self) {
   return self;
 }
 
+var styles = {"OBWebCheckout":"_23Au0","searchBar":"_2jvUq"};
+
 var BankItem = function BankItem(_ref) {
   var bankData = _ref.bankData,
       onSubmit = _ref.onSubmit;
@@ -83,7 +85,7 @@ var SearchBar = /*#__PURE__*/function (_React$Component) {
 
   _proto.render = function render() {
     return /*#__PURE__*/React.createElement("form", {
-      className: "searchBar"
+      className: styles.searchBar
     }, /*#__PURE__*/React.createElement("input", {
       type: "text",
       placeholder: "Search...",
@@ -136,12 +138,12 @@ var OBWebCheckout = /*#__PURE__*/function (_React$Component2) {
 
   _proto2.render = function render() {
     return /*#__PURE__*/React.createElement("div", {
-      className: "OBWebCheckout"
+      className: styles.OBWebCheckout
     }, /*#__PURE__*/React.createElement(SearchBar, {
       filterText: this.state.filterText,
       onFilterTextChange: this.handleFilterTextChange
     }), /*#__PURE__*/React.createElement("ul", {
-      className: "bank-list"
+      className: styles.bankList
     }, /*#__PURE__*/React.createElement(BankList, {
       banks: this.props.configuration.paymentMethods,
       onSubmit: this.handleSubmit,
@@ -152,9 +154,5 @@ var OBWebCheckout = /*#__PURE__*/function (_React$Component2) {
   return OBWebCheckout;
 }(React.Component);
 
-var index = {
-  OBWebCheckout: OBWebCheckout
-};
-
-export default index;
+export default OBWebCheckout;
 //# sourceMappingURL=index.modern.js.map

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import  {OBWebCheckout}  from 'webcheckout-ob'
+import  ObWebCheckout  from 'webcheckout-ob'
 import 'webcheckout-ob/dist/index.css'
 
 
@@ -12,10 +12,10 @@ const configuration = {
   onError(error) {
     console.error(error)
   }
- };
+ }
 
 
- class App extends React.Component {
+ export default class App extends React.Component {
   constructor(props){
       super(props)
       this.state = {paymentMethods:[]}
@@ -31,9 +31,9 @@ const configuration = {
       configuration.paymentMethods = this.state.paymentMethods
       return (
        <div>
-        <ObWebCheckout configuration={configuration} />
+          <ObWebCheckout configuration={configuration} />
       </div> )
     }
   }
 
-export default App
+

@@ -44,7 +44,7 @@ import styles from './styles.module.css'
 
     render() {
       return (
-        <form className = "searchBar">
+        <form className = {styles.searchBar}>
           <input
             type="text"
             placeholder="Search..."
@@ -56,7 +56,8 @@ import styles from './styles.module.css'
     }
   }
 
- class OBWebCheckout extends React.Component {
+
+ export default class OBWebCheckout extends React.Component {
     constructor(props){
         super(props)
         this.state = {filterText: '', data: {paymentMethod:[]}}
@@ -83,12 +84,12 @@ import styles from './styles.module.css'
 
      render() {
         return (
-         <div className="OBWebCheckout">
+         <div className = {styles.OBWebCheckout} >
             <SearchBar
                        filterText={this.state.filterText}
                        onFilterTextChange={this.handleFilterTextChange}
            />
-             <ul className ="bank-list">
+             <ul className = {styles.bankList}>
              <BankList banks = {this.props.configuration.paymentMethods}
                        onSubmit = {this.handleSubmit}
                        filterText={this.state.filterText} />
@@ -98,4 +99,4 @@ import styles from './styles.module.css'
     }
 
 
-export default  {OBWebCheckout}
+
