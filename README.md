@@ -38,3 +38,13 @@ class Example extends Component {
 ```
 
 
+## Develop library
+```
+git clone git@github.com:101digital/webcheckout-ob.git
+cd webcheckout-ob
+yarn install && yarn build
+yarn link
+
+cd example
+yarn link webcheckout-ob
+```
